@@ -1,3 +1,16 @@
+(function (factory) {
+if (typeof define === 'function' && define.amd) {
+    // AMD. Register as an anonymous module depending on jQuery.
+    define(['tether'], factory);
+} else {
+    // No AMD. Register plugin with global jQuery object.
+    factory(Tether);
+}
+}(function (Tether) {
+
+    return function () {
+
+
 (function() {
   var ATTACHMENT, Evented, Shepherd, Step, Tour, addClass, createFromHTML, extend, getBounds, hasClass, matchesSelector, parseShorthand, removeClass, uniqueId, _ref,
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
@@ -439,3 +452,7 @@
   window.Shepherd = Shepherd;
 
 }).call(this);
+
+};  
+
+}));
